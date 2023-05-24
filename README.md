@@ -6,7 +6,8 @@ Java ile metin tabanlı bir macera oyunu yapıyoruz.
 KARAKTERLER
 -
 
-![indir.png](..%2F..%2Findir.png)
+![indir](https://github.com/mertcan-taskiran/AdventureGame/assets/65121494/41e26b53-d143-4394-98f1-3df0ce12bd3c)
+
 
 CANAVARLAR
 -
