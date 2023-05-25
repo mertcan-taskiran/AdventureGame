@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class Game {
     private Scanner input = new Scanner(System.in);
     public void start(){
-        System.out.println("Macera Oyununa Hoşgeldiniz !");
-        System.out.println("============================");
+        System.out.println("########### Macera Oyununa Hoşgeldiniz ! ###########");
         System.out.println("Bir isim giriniz : ");
         //String playerName = input.nextLine();
         //Player player = new Player(playerName);
@@ -20,9 +19,14 @@ public class Game {
             System.out.println("########### Bölgeler ###########");
             System.out.println("1 - Güvenli Ev => Burası güvenli bölge. Düşman yok !");
             System.out.println("2 - Mağaza => Silah veya zırh satın alabilirsiniz !");
+            System.out.println("3 - Çıkış => Oyunu sonlandır !");
+            System.out.println("");
             System.out.print("Lütfen gitmek istediğiniz bölgeyi seçiniz : ");
             int selectLoc = input.nextInt();
             switch (selectLoc){
+                case 0:
+                    location = null;
+                    break;
                 case 1:
                     location = new SafeHouse(player);
                     break;
@@ -31,6 +35,11 @@ public class Game {
                     break;
                 default:
                     location = new SafeHouse(player);
+            }
+
+            if (location == null){
+                System.out.println("Karanlık ve sisli adada çabuk pes ettin !");
+                break;
             }
             if (!location.onLocation()){
                 System.out.println("Game Over!");
