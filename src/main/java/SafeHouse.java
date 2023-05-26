@@ -9,6 +9,7 @@ public class SafeHouse extends NormalLoc{
         System.out.println("########### Güvenli Ev ###########");
         System.out.println("Güvenli Evdesiniz !");
         System.out.println("Canınız Yenilendi !");
+        this.getPlayer().setOrjinalHealth(this.getPlayer().getOrjinalHealth());
         return true;
     }
 }
